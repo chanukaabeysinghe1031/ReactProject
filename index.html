@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" >
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <title>React tutorial</title>
+</head>
+<body>
+    <div id="app">
+    </div>
+
+    <script type="text/babel">
+        class App extends  React.Component{
+
+            state = {
+                name:'Chanuka'
+            }
+
+            handleClick = (e) => {
+                console.log(this.state);
+            }
+            render(){
+                return (
+                    <div className="app-content">
+                        <h1>Hey Chanuka Abeysinghe</h1>
+                        <button onClick={this.handleClick}>Click me</button>
+                    </div>
+                );
+            }
+        }
+
+        ReactDOM.render(<App/>,document.getElementById('app'));
+    </script>
+</body>
+</html>
